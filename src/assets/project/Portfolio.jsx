@@ -1,4 +1,5 @@
 import { useState } from "react";
+import heroImage from "../hero.png";
 
 function Portfolio() {
   const [darkMode, setDarkMode] = useState(true);
@@ -9,30 +10,31 @@ function Portfolio() {
 
   return (
     <div className={darkMode ? "dark container" : "light container"}>
-
       <nav className="navbar">
-        <h2 className="logo">FAIZAN.</h2>
+        <div className="logo">FAIZAN.</div>
 
-        <ul className="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+        <div className="nav-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#education">Education</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
 
         <button className="theme-btn" onClick={changeTheme}>
           {darkMode ? "☀ Light" : "☾ Dark"}
         </button>
       </nav>
 
-      <section id="home" className="hero">
+      <section className="hero" id="home">
         <div className="hero-content">
           <p className="hero-tag">AI & ML • WEB DEVELOPMENT • GENAI</p>
 
           <h1>
-            Hi, I'm <span>Md Faizan Alam</span>
+            Hi, I'm
+            <br />
+            Md Faizan Alam
           </h1>
 
           <h2>B.Tech AI & ML Student</h2>
@@ -43,221 +45,150 @@ function Portfolio() {
           </p>
 
           <div className="hero-buttons">
-            <a href="#projects" className="main-btn">
+            <a href="#projects" className="primary-btn">
               View Projects
             </a>
 
-            <a href="#contact" className="outline-btn">
+            <a href="#contact" className="secondary-btn">
               Contact Me
             </a>
           </div>
         </div>
 
-        <div className="hero-box">
-          <div className="hero-box-inner">
-            <p>Currently Exploring</p>
-            <h3>Generative AI</h3>
-            <span>RAG • LLMs • Agentic AI</span>
-          </div>
+        <div className="hero-visual">
+          <img
+            src={heroImage}
+            alt="Md Faizan Alam Portfolio"
+            className="hero-image"
+          />
         </div>
       </section>
 
-      <section id="about" className="section">
-        <div className="section-heading">
-          <p>ABOUT ME</p>
-          <h2>Building. Learning. Exploring.</h2>
-        </div>
+      <section className="section" id="about">
+        <p className="section-label">ABOUT ME</p>
+        <h2>Building with curiosity and learning by doing.</h2>
 
-        <div className="about-card">
-          <div>
-            <h3>Who I Am</h3>
+        <p className="section-text">
+          I am a B.Tech AI & ML student at Narula Institute of Technology with
+          an interest in web development, Artificial Intelligence and
+          Generative AI. I enjoy building practical projects and learning how
+          modern AI applications work.
+        </p>
 
-            <p>
-              I am a B.Tech student specializing in Artificial Intelligence
-              and Machine Learning at Narula Institute of Technology.
-            </p>
-
-            <p>
-              My current focus is on web development, React.js and building
-              practical AI-powered applications. I enjoy understanding how
-              modern AI systems work and turning those concepts into usable
-              projects.
-            </p>
-
-            <p>
-              Along with software development, I am exploring Generative AI,
-              Large Language Models, Retrieval-Augmented Generation and
-              Agentic AI concepts.
-            </p>
-          </div>
-
-          <div className="about-highlight">
-            <div>
-              <span>Focus</span>
-              <strong>AI + Web</strong>
-            </div>
-
-            <div>
-              <span>Frontend</span>
-              <strong>React.js</strong>
-            </div>
-
-            <div>
-              <span>AI</span>
-              <strong>GenAI / LLM</strong>
-            </div>
-
-            <div>
-              <span>Learning</span>
-              <strong>DSA</strong>
-            </div>
-          </div>
-        </div>
+        <p className="section-text">
+          My current focus includes React.js, JavaScript, Python, APIs,
+          Generative AI, Large Language Models, RAG and AI application
+          development.
+        </p>
       </section>
 
-      <section id="skills" className="section">
-        <div className="section-heading">
-          <p>TECHNICAL SKILLS</p>
-          <h2>Tools & Technologies</h2>
-        </div>
+      <section className="section" id="skills">
+        <p className="section-label">SKILLS</p>
+        <h2>Technologies I work with.</h2>
 
         <div className="skills-grid">
           <div className="skill-card">
-            <span>01</span>
             <h3>Web Development</h3>
             <p>HTML • CSS • JavaScript • React.js</p>
           </div>
 
           <div className="skill-card">
-            <span>02</span>
             <h3>Programming</h3>
-            <p>Python • C • JavaScript</p>
+            <p>Python • JavaScript • C</p>
           </div>
 
           <div className="skill-card">
-            <span>03</span>
             <h3>Generative AI</h3>
-            <p>LLMs • Prompt Engineering • RAG • GenAI</p>
+            <p>LLMs • RAG • LangChain • Prompt Engineering</p>
           </div>
 
           <div className="skill-card">
-            <span>04</span>
-            <h3>AI Technologies</h3>
-            <p>LangChain • Embeddings • Semantic Search</p>
+            <h3>AI Application Development</h3>
+            <p>Embeddings • Semantic Search • Vector Databases • APIs</p>
           </div>
 
           <div className="skill-card">
-            <span>05</span>
-            <h3>AI Infrastructure</h3>
-            <p>Vector Databases • APIs • Document Retrieval</p>
-          </div>
-
-          <div className="skill-card">
-            <span>06</span>
-            <h3>Development Tools</h3>
+            <h3>Tools</h3>
             <p>Git • GitHub • VS Code • Vite</p>
           </div>
+
+          <div className="skill-card">
+            <h3>Currently Learning</h3>
+            <p>DSA • Full-Stack Development • Backend Development</p>
+          </div>
         </div>
       </section>
 
-      <section className="section ai-section">
-        <div className="section-heading">
-          <p>AI & GENAI</p>
-          <h2>What I'm Exploring</h2>
-        </div>
+      <section className="section" id="ai">
+        <p className="section-label">AI & GENAI</p>
+        <h2>Exploring modern AI application development.</h2>
 
         <div className="ai-grid">
-
           <div className="ai-card">
-            <div className="ai-number">01</div>
+            <span>01</span>
             <h3>Generative AI</h3>
             <p>
-              Exploring how Large Language Models can be integrated into
-              applications to generate useful, context-aware responses.
+              Exploring Large Language Models and building applications that
+              use AI-generated responses.
             </p>
-            <div className="tags">
-              <span>LLMs</span>
-              <span>Prompt Engineering</span>
-              <span>GenAI</span>
-            </div>
           </div>
 
           <div className="ai-card">
-            <div className="ai-number">02</div>
-            <h3>Retrieval-Augmented Generation</h3>
+            <span>02</span>
+            <h3>RAG</h3>
             <p>
-              Building systems that retrieve relevant information from
-              documents before sending the context to an LLM for better
-              grounded answers.
+              Working with document retrieval, embeddings, semantic search and
+              context-aware LLM responses.
             </p>
-            <div className="tags">
-              <span>RAG</span>
-              <span>Embeddings</span>
-              <span>Vector DB</span>
-            </div>
           </div>
 
           <div className="ai-card">
-            <div className="ai-number">03</div>
+            <span>03</span>
             <h3>Agentic AI</h3>
             <p>
-              Exploring Agentic AI concepts such as tool usage, reasoning,
-              task planning, context handling and AI systems that can work
-              through multi-step tasks.
+              Exploring Agentic AI concepts and modern AI-powered application
+              workflows.
             </p>
-            <div className="tags">
-              <span>Agents</span>
-              <span>Tools</span>
-              <span>Reasoning</span>
-            </div>
           </div>
-
         </div>
       </section>
 
-      <section id="education" className="section">
-        <div className="section-heading">
-          <p>EDUCATION</p>
-          <h2>Academic Journey</h2>
-        </div>
+      <section className="section" id="education">
+        <p className="section-label">EDUCATION</p>
+        <h2>Academic journey.</h2>
 
         <div className="education-card">
-          <div className="education-year">2024 — PRESENT</div>
-
           <div>
+            <p className="education-year">2024 — PRESENT</p>
             <h3>B.Tech in Artificial Intelligence & Machine Learning</h3>
             <p>Narula Institute of Technology</p>
-            <span>Affiliated to MAKAUT</span>
+            <p>Affiliated to MAKAUT</p>
+          </div>
+
+          <div className="education-status">
+            <span>Currently Pursuing</span>
           </div>
         </div>
       </section>
 
-      <section id="projects" className="section">
-        <div className="section-heading">
-          <p>PROJECTS</p>
-          <h2>Things I've Built</h2>
-        </div>
+      <section className="section" id="projects">
+        <p className="section-label">PROJECTS</p>
+        <h2>Things I have built.</h2>
 
         <div className="projects-grid">
-
           <div className="project-card featured-project">
-            <div className="project-top">
-              <span className="project-type">AI / GENAI</span>
-              <span className="project-icon">↗</span>
-            </div>
+            <p className="project-number">01</p>
 
             <h3>GRU PDF Assistant</h3>
 
             <h4>RAG-Powered AI Research Assistant</h4>
 
             <p>
-              An AI research assistant that allows users to upload a PDF or
-              research paper and ask questions about its content. The system
-              retrieves relevant document information and uses an LLM to
-              generate context-aware answers.
+              An AI research assistant that allows users to ask questions about
+              PDF documents and receive context-aware answers.
             </p>
 
-            <div className="project-flow">
+            <div className="pipeline">
               <span>PDF</span>
               <b>→</b>
               <span>Chunks</span>
@@ -269,113 +200,96 @@ function Portfolio() {
               <span>LLM</span>
             </div>
 
-            <div className="tags">
+            <div className="project-tech">
               <span>Python</span>
               <span>React.js</span>
               <span>LangChain</span>
               <span>RAG</span>
+              <span>LLMs</span>
               <span>ChromaDB</span>
-              <span>Gemini API</span>
             </div>
           </div>
 
           <div className="project-card">
-            <div className="project-top">
-              <span className="project-type">WEB DEVELOPMENT</span>
-              <span className="project-icon">↗</span>
-            </div>
+            <p className="project-number">02</p>
 
             <h3>Personal Portfolio</h3>
 
-            <h4>React-based Portfolio Website</h4>
+            <h4>React.js Portfolio Website</h4>
 
             <p>
-              A responsive personal portfolio created using React.js,
-              JavaScript and CSS to showcase my skills, education, projects
-              and learning journey.
+              A responsive personal portfolio website showcasing my skills,
+              projects, education and interest in AI and web development.
             </p>
 
-            <div className="tags">
+            <div className="project-tech">
               <span>React.js</span>
               <span>JavaScript</span>
+              <span>HTML</span>
               <span>CSS</span>
               <span>Vite</span>
             </div>
           </div>
 
           <div className="project-card">
-            <div className="project-top">
-              <span className="project-type">JAVASCRIPT</span>
-              <span className="project-icon">↗</span>
-            </div>
+            <p className="project-number">03</p>
 
             <h3>Student Registration Form</h3>
 
-            <h4>Frontend Practice Project</h4>
+            <h4>Beginner Web Development Project</h4>
 
             <p>
-              A beginner-friendly web project created to practice HTML, CSS
-              and JavaScript form handling and user interaction.
+              A beginner-friendly project created while learning HTML, CSS and
+              JavaScript fundamentals.
             </p>
 
-            <div className="tags">
+            <div className="project-tech">
               <span>HTML</span>
               <span>CSS</span>
               <span>JavaScript</span>
             </div>
           </div>
-
         </div>
       </section>
 
-      <section className="section">
-        <div className="section-heading">
-          <p>CERTIFICATIONS</p>
-          <h2>Learning Beyond College</h2>
-        </div>
+      <section className="section" id="certifications">
+        <p className="section-label">CERTIFICATIONS</p>
+        <h2>Learning beyond the classroom.</h2>
 
         <div className="cert-grid">
-
           <div className="cert-card">
-            <span>NPTEL</span>
-            <h3>Principles of Management</h3>
-            <p>Elite Certification • 2026</p>
+            <p>01</p>
+            <h3>NPTEL — Principles of Management</h3>
+            <span>Elite Certificate • 2026</span>
           </div>
 
           <div className="cert-card">
-            <span>IALSD</span>
+            <p>02</p>
             <h3>Prompt Engineering</h3>
-            <p>Certificate of Completion • 2026</p>
+            <span>Certificate of Completion • 2026</span>
           </div>
-
         </div>
       </section>
 
-      <section id="contact" className="section contact-section">
-        <div className="section-heading">
-          <p>CONTACT</p>
-          <h2>Let's Connect</h2>
-        </div>
+      <section className="contact-section" id="contact">
+        <p className="section-label">CONTACT</p>
 
-        <div className="contact-card">
-          <h3>Have a project or opportunity?</h3>
+        <h2>Let's build something interesting.</h2>
 
-          <p>
-            I'm interested in web development, AI/ML, Generative AI and
-            building practical software projects.
-          </p>
+        <p>
+          I am open to learning, collaborating on projects and connecting with
+          developers and AI enthusiasts.
+        </p>
 
-          <a href="mailto:your-email@example.com" className="main-btn">
-            Get In Touch
-          </a>
-        </div>
+        <a href="mailto:your-email@example.com" className="primary-btn">
+          Get In Touch
+        </a>
       </section>
 
-      <footer className="footer">
+      <footer>
         <p>© 2026 Md Faizan Alam</p>
-        <p>B.Tech AI & ML • Building with React & AI</p>
+        <p>B.Tech AI & ML Student</p>
       </footer>
-
     </div>
   );
 }
